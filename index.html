@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Website</title>
+  <style>
+    body {
+      background-color: #F9F9F9;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card {
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+    
+    .input-group {
+      margin-bottom: 15px;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 10px 0px;
+      border: 1px solid #CED4DA;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .btn {
+      background-color: #FFC107;
+      border: none;
+      color: #FFFFFF;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .btn-delete {
+      background-color: #E91E63;
+      margin-left: 5px;
+    }
+    
+    .btn:hover {
+      background-color: #FFA000;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>შესვლა</h2>
+    <div class="input-group">
+      <input type="email" id="emailInput" placeholder="შეიყვანე ი-მეილი">
+    </div>
+    <div class="input-group">
+      <input type="password" id="passwordInput" placeholder="შეიყვანე პაროლი">
+    </div>
+    <div class="input-group">
+      <button class="btn" onclick="login()">შესვლა</button>
+      <button class="btn btn-delete" onclick="clearFields()">გასუფთავება</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var email = document.getElementById("emailInput").value;
+      var password = document.getElementById("passwordInput").value;
+      
+      alert("გთხოვთ შეიყვანოთ ი-მეილი და" + email + "პაროლი" + password);
+    }
+    
+    function clearFields() {
+      document.getElementById("emailInput").value = "";
+      document.getElementById("passwordInput").value = "";
+    }
+  </script>
+</body>
+</html>
